@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "mamiewebsite"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    
+---
+title: "Mamie Cincotta"
+---
+
+I am a doctoral student at the University of Texas at Dallas.
+
+### More Information
+
+Interests:
+
+  * Bureacracy
+  * State and Local Politics
+
+### Contact me
+
+[mamiecincotta@utdallas.edu](mailto:mamiecincotta@utdallas.edu)
+
+
+editor: visual
+
