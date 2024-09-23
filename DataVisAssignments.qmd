@@ -1,0 +1,26 @@
+---
+title: "EPPS 6356 Assignments"
+editor: visual
+---
+
+# Assignment One
+
+1.  According to [Avant Arte](https://avantarte.com/insights/guides/what-is-generative-art), generative art is "art created with the use of an autonomous system".
+
+    Here is an example displayed in the above article of Dmitri Cherniak's generative artworks from 2023.
+
+![](images/clipboard-1803580030.png)
+
+2.  This is my generated image. The winter color I chose was powder blue.
+
+![](images/clipboard-614570005.png)
+
+3.  This is an example of a chart from an article that I will critique. This is Figure 1 from "Slow-Rolling, Fast-Tracking, and the Pace of Bureaucratic Decisions in Rulemaking". This figure is overwhelming and includes too many bureaus. It's hard to immediately associate the ends of the lines with what bureau they correspond to. While the caption does specify that the appendix clears up the abbreviations used for the bureaus, the use of abbreviations makes it difficult to tell what is being demonstrated. The use of abbreviations makes this chart much harder to understand if you aren't familiar with abbreviations used by American government bureaus which could disproportionately impact the ability of non-Americans to understand the chart. Additionally, without making clear what these bureaus are patterns and groupings across types of bureaus cannot be intermediately ascertained.
+
+![](images/clipboard-2093529160.png)
+
+References:
+
+<https://avantarte.com/insights/guides/what-is-generative-art>
+
+Potter, Rachel Augustine. “Slow-Rolling, Fast-Tracking, and the Pace of Bureaucratic Decisions in Rulemaking.” *The Journal of Politics*, vol. 79, no. 3, July 2017, pp. 841–55. *DOI.org (Crossref)*, <https://doi.org/10.1086/690614>.
