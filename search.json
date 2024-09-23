@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mamie Cincotta",
+    "section": "",
+    "text": "I am a second year doctoral student at the University of Texas at Dallas.\nInterests:\n\nAmerican Bureaucracy\nState and Local Politics\nFederalism\n\n\nContact me\nmamiecincotta@utdallas.edu"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "My CV",
+    "section": "",
+    "text": "My CV will be uploaded soon."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research will be uploaded soon."
+  },
+  {
+    "objectID": "CV.html",
+    "href": "CV.html",
+    "title": "CV",
+    "section": "",
+    "text": "To be added soon."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "University of Texas at Dallas Teaching Assistant:\n\nPSCI 4319: Political Polarization in America, with Curtis Bram (Fall 2024)\n\n\n\nGOVT 2306: State and Local Government, with Kashmiri Medhi (Summer 2024)\n\n\n\nPSCI 3322: Constitutional Law, with Banks Miller (Spring 2024)\n\n\n\nPSCI 4320: Political Psychology, with Lauren Santoro (Fall 2023)\n\n\n\nGOVT 2306: State and Local Government, with Lauren Santoro (Fall 2023)\n\nGraduate Teaching Certificate, University of Texas at Dallas, (Summer 2024)"
+  },
+  {
+    "objectID": "Assignment1.html",
+    "href": "Assignment1.html",
+    "title": "EPPS 6302 Assignments",
+    "section": "",
+    "text": "Assignment One\nLink to Qualtrics Survey\n\nAnalysis:\na. The survey is structured with an introduction first,\nb. The questionnaire is composed of questions about levels of agreement/disagreemnet with given statements, purchasing habits, willingness to buy certain theoretical products and what the pricing should be, and demographic information.\nc. The questions are ordered with the agreement/disagreement assessments being placed first, questions about purchasing habits coming after, and demographic information being placed last.\n\n\nImprovements:\nI think the page breaks could be placed in a way to keep related questions grouped together on the same page. This would improve user experience by allowing the respondent to view their responses to related questions."
+  },
+  {
+    "objectID": "DataVisAssignments.html",
+    "href": "DataVisAssignments.html",
+    "title": "EPPS 6356 Assignments",
+    "section": "",
+    "text": "Assignment One\n\nAccording to Avant Arte, generative art is “art created with the use of an autonomous system”.\nHere is an example displayed in the above article of Dmitri Cherniak’s generative artworks from 2023.\n\n\n\nThis is my generated image. The winter color I chose was powder blue.\n\n\n\nThis is an example of a chart from an article that I will critique. This is Figure 1 from “Slow-Rolling, Fast-Tracking, and the Pace of Bureaucratic Decisions in Rulemaking”. This figure is overwhelming and includes too many bureaus. It’s hard to immediately associate the ends of the lines with what bureau they correspond to. While the caption does specify that the appendix clears up the abbreviations used for the bureaus, the use of abbreviations makes it difficult to tell what is being demonstrated. The use of abbreviations makes this chart much harder to understand if you aren’t familiar with abbreviations used by American government bureaus which could disproportionately impact the ability of non-Americans to understand the chart. Additionally, without making clear what these bureaus are patterns and groupings across types of bureaus cannot be intermediately ascertained.\n\n\nReferences:\nhttps://avantarte.com/insights/guides/what-is-generative-art\nPotter, Rachel Augustine. “Slow-Rolling, Fast-Tracking, and the Pace of Bureaucratic Decisions in Rulemaking.” The Journal of Politics, vol. 79, no. 3, July 2017, pp. 841–55. DOI.org (Crossref), https://doi.org/10.1086/690614."
+  }
+]
