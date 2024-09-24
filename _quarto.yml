@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "mamiecincotta.github.io"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About Me
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: Assignment1.qmd
+        text: EPPS 6302 Assignments
+      - href: DataVisAssignments.qmd
+        text: EPPS 6356 Assignments
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
