@@ -17,6 +17,8 @@ website:
         text: EPPS 6302 Assignments
       - href: DataVisAssignments.qmd
         text: EPPS 6356 Assignments
+      - href: KnowMiningAssignments.qmd
+        text: EPPS 6323 Assignments
 
 format:
   html:
