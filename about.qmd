@@ -1,5 +1,0 @@
----
-title: "My CV"
----
-
-My CV will be uploaded soon.
