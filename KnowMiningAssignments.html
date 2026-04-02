@@ -184,6 +184,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#weekly-reflection-two" id="toc-weekly-reflection-two" class="nav-link" data-scroll-target="#weekly-reflection-two">Weekly Reflection Two</a></li>
   <li><a href="#assignment-two" id="toc-assignment-two" class="nav-link" data-scroll-target="#assignment-two">Assignment Two</a></li>
   <li><a href="#weekly-reflection-three" id="toc-weekly-reflection-three" class="nav-link" data-scroll-target="#weekly-reflection-three">Weekly Reflection Three</a></li>
+  <li><a href="#weekly-reflection-four" id="toc-weekly-reflection-four" class="nav-link" data-scroll-target="#weekly-reflection-four">Weekly Reflection Four</a></li>
+  <li><a href="#weekly-reflection-five" id="toc-weekly-reflection-five" class="nav-link" data-scroll-target="#weekly-reflection-five">Weekly Reflection Five</a></li>
+  <li><a href="#weekly-reflection-6" id="toc-weekly-reflection-6" class="nav-link" data-scroll-target="#weekly-reflection-6">Weekly Reflection 6</a></li>
+  <li><a href="#assignment-three" id="toc-assignment-three" class="nav-link" data-scroll-target="#assignment-three">Assignment Three</a></li>
+  <li><a href="#weekly-reflection-seven" id="toc-weekly-reflection-seven" class="nav-link" data-scroll-target="#weekly-reflection-seven">Weekly Reflection Seven</a></li>
   </ul>
 </nav>
     </div>
@@ -707,6 +712,102 @@ Status quo, indep. in future             Independence now
 <section id="weekly-reflection-three" class="level1">
 <h1>Weekly Reflection Three</h1>
 <p>For my project, I will personally use ChatGPT and Gemini, I may also use Copliot. I have the most experience using ChatGPT and as a student I have free access to Gemini Pro. By using these AI models I am able to better formulate my own ideas and also better collect research. I’ve also found that AI models are useful in helping me structure and fix errors in my programming. I’ve had the best experience using ChatGPT to explain coding errors to me, as well as to suggest possible packages that I may be able to use to help myself. For this project, I will primarily be using AI models as a way to help myself structure ideas and improve my programming skills.</p>
+</section>
+<section id="weekly-reflection-four" class="level1">
+<h1>Weekly Reflection Four</h1>
+<p>Humans find knowledge through years of experience. Knowledge is different from information because information is raw numbers/facts while knowledge involves contextualizing that information and understanding how that information can be applied. Though information is structured these structures are unable to be properly applied without the knowledge of why this information is structured the way it is. Knowledge is developed through continually interacting with and applying information.</p>
+<p>AI discrepancies and failures can come in a variety of ways. First are more traditional technical failures, such as power outages or AI platforms getting shut down. These failures are not inherent to AI and instead are troubles all technology can run into. AI also hallucinates or get information wrong. As it is building off previously entered information, when encountering prompts outside of it’s training data it will hallucinate things to satisfy the prompter. AI will also struggle to understand certain things, such as human emotion/tone, that’s more difficult to be transferred into data and for the AI to read into.</p>
+</section>
+<section id="weekly-reflection-five" class="level1">
+<h1>Weekly Reflection Five</h1>
+<p>Overfitting is a process where when attempting to capture the underlying information and structures of data, the data is conformed to too closely and the underlying noise is instead captured. No dataset that would have ML trained on it is perfect as text data will often contain unrelated noise that does not need to be captured. When a model that has been overfitted is presented with new data outside of it’s training data it will not be able to provide accurate responses because it has been overly fit to the specifics of the training data.</p>
+</section>
+<section id="weekly-reflection-6" class="level1">
+<h1>Weekly Reflection 6</h1>
+<p>Prediction is not the same as explanation. It is possible to accurately predict something without knowing the underlying forces that cause those predictions to come true. Explanations provide a deeper understanding for the mechanisms for why events and outcomes occur.</p>
+<p>In political science age, education, and income are all positively correlated with voter turnout. These factors are also correlated among themselves. As people age they get higher incomes. This makes it difficult to untangle which factor has the most influence on turnout in a specific area. In order to make a causal claim that age causes turnout, you need to be able to control for other factors such as income and education. This isolates the effect of a single variable.</p>
+</section>
+<section id="assignment-three" class="level1">
+<h1>Assignment Three</h1>
+<ol start="6" type="1">
+<li>A linear regression is not the best fit for an outcome that’s not continuous, such as vote choice. To correct this we either need to use a new DV or to use a logistic regression. A logistic regression was chosen.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven) </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>teds <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="st">"https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true"</span>) </span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>regplot<span class="ot">=</span><span class="cf">function</span>(x,y){ </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  fit<span class="ot">=</span><span class="fu">lm</span>(y<span class="sc">~</span>x) </span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(x,y) </span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(fit,<span class="at">col=</span><span class="st">"red"</span>) </span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>} </span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>regplot_logit <span class="ot">=</span> <span class="cf">function</span>(x, y, data){ </span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">=</span> <span class="fu">glm</span>(<span class="fu">reformulate</span>(x, y), <span class="at">data =</span> data, <span class="at">family =</span> binomial)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(data[[x]], data[[y]], </span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> x, <span class="at">ylab =</span> y, </span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="st">"Logistic Regression Fit"</span>)</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  x_seq <span class="ot">=</span> <span class="fu">seq</span>(<span class="fu">min</span>(data[[x]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>              <span class="fu">max</span>(data[[x]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>              <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>  newdata <span class="ot">=</span> <span class="fu">data.frame</span>(x_seq)</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(newdata) <span class="ot">=</span> x   <span class="co"># 🔑 THIS FIXES YOUR ERROR</span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>  y_pred <span class="ot">=</span> <span class="fu">predict</span>(fit, <span class="at">newdata =</span> newdata, <span class="at">type =</span> <span class="st">"response"</span>)</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(x_seq, y_pred, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(teds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "District"        "Sex"             "Age"             "Edu"            
+ [5] "Arear"           "Career"          "Career8"         "Ethnic"         
+ [9] "Party"           "PartyID"         "Tondu"           "Tondu3"         
+[13] "nI2"             "votetsai"        "green"           "votetsai_nm"    
+[17] "votetsai_all"    "Independence"    "Unification"     "sq"             
+[21] "Taiwanese"       "edu"             "female"          "whitecollar"    
+[25] "lowincome"       "income"          "income_nm"       "age"            
+[29] "KMT"             "DPP"             "npp"             "noparty"        
+[33] "pfp"             "South"           "north"           "Minnan_father"  
+[37] "Mainland_father" "Econ_worse"      "Inequality"      "inequality5"    
+[41] "econworse5"      "Govt_for_public" "pubwelf5"        "Govt_dont_care" 
+[45] "highincome"      "votekmt"         "votekmt_nm"      "Blue"           
+[49] "Green"           "No_Party"        "voteblue"        "voteblue_nm"    
+[53] "votedpp_1"       "votekmt_1"      </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot_logit</span>(<span class="st">"Edu"</span>, <span class="st">"votetsai"</span>, teds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="KnowMiningAssignments_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot_logit</span>(<span class="st">"Age"</span>, <span class="st">"votetsai"</span>, teds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="KnowMiningAssignments_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot_logit</span>(<span class="st">"income"</span>, <span class="st">"votetsai"</span>, teds)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="KnowMiningAssignments_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="weekly-reflection-seven" class="level1">
+<h1>Weekly Reflection Seven</h1>
+<p>Text mining utilizes methods that detect things that a human may not pick up on. Humans are subjective and can have off days where they may not be able to pick up on the same underlying patterns that a machine would be able to. Humans are accustomed to reading and picking out particular things and attention paid to those patterns may lead to humans overlooking other patterns. At the same time, computers may read patterns into places they don’t truly exist in except for coincidence and may not be able to pick up on more emotional nuances that a human can.</p>
+<p>NLP and LLM can help in my research by understanding human text and text based information. NLP will allow computers to better understand the patterns of human speech and can even be used to analyse the tone of text.</p>
+<p>There are limits in how much data NLP and LLMs can handle at a time. To overcome this data may ahve to be given in chunks or certain LLMs will smaller processing powers may have to be avoided.</p>
+<p>AI should be avoided in cases where sensitive information is being handled unless the AI is hosted entirely on servers that are trusted. FERPA information should not be given to AI models that are not hosted on university servers. Additionally, AI should be used as a tool and not as a replacement to traditional writing. Using AI text purely from the source and without disclosure is a form of plagiarism and should be ignored. AI information should also be double checked to avoid hallucinations. If someone publishes something, even if they are upfront about AI usage, and there is inaccurate information the person who published that is responsible for the wrong information even if the AI generated it.</p>
 
 
 </section>
